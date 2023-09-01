@@ -1,7 +1,24 @@
-In the console, type clear and hit Enter or Return. 
+unknown80cc9cf0f9e4:streaming-02-multiple-processes ivanquackenbush$ python3 multiple_processes.py > out3.txt
+2023-08-31 14:45:55,161 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2023-08-31 at 02:45 PM
+  Operating System: posix Darwin 21.3.0
+  Python Version:   3.10.6
+  Path to Interpreter:  /Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+======================================================================
 
-This will clear the console output. 
-
-Run the file once while the tasks are longer. 
-
-Copy and paste the terminal results (when task_duration is 3) here.
+2023-08-31 14:45:55,161 - INFO - Called recreate_database().
+2023-08-31 14:45:55,161 - INFO - Called drop_table().
+2023-08-31 14:45:55,163 - INFO - Table 'pets' dropped successfully.
+2023-08-31 14:45:55,163 - INFO - Called create_table().
+2023-08-31 14:45:55,165 - INFO - Table 'pets' created successfully.
+2023-08-31 14:45:55,241 - INFO - Called process_one().
+2023-08-31 14:45:55,241 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2023-08-31 14:45:58,255 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2023-08-31 14:46:05,240 - INFO - Called process_two().
+2023-08-31 14:46:05,240 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2023-08-31 14:46:08,249 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2023-08-31 14:46:15,245 - INFO - Called process_three().
+2023-08-31 14:46:15,245 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2023-08-31 14:46:18,258 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.

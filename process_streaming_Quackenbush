@@ -1,0 +1,31 @@
+import csv
+import time
+import sys  # Import the sys module
+
+# Define the CSV file name
+CSV_FILE = 'Baseball_Game_Events.csv'
+
+def stream_events():
+    try:
+        # Open the CSV file for reading
+        with open(CSV_FILE, mode='r') as csv_file:
+            csv_reader = csv.DictReader(csv_file)
+
+            for row in csv_reader:
+                # Read the event data from the CSV
+                event_data = ', '.join(row.values())  # Combine all columns
+
+                # Print the event data to the terminal
+                print(event_data)
+                
+                # Manually flush the output buffer
+                sys.stdout.flush()
+
+                # Sleep for 1/6th of a second (6 events per second)
+                time.sleep(1 / 6)
+
+    except KeyboardInterrupt:
+        print("\nStreaming canceled by user (Ctrl + C).")
+
+if __name__ == "__main__":
+    stream_events()

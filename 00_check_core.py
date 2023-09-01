@@ -34,7 +34,10 @@ This script fetches and executes Python code from a remote source using
 # Python Standard Library
 import os
 import urllib.request
+import ssl  # Import the ssl module to disable SSL certificate verification
 
+# Disable SSL certificate verification
+ssl._create_default_https_context = ssl._create_unverified_context
 
 # The web addresses (URLs) of the code
 URLS = [
